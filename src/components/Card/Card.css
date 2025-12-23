@@ -1,9 +1,38 @@
 .card {
-  padding: 16px 20px;
-  border-radius: 10px;
   background: white;
-  color: #111;
-  font-weight: 500;
+  border-radius: 12px;
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  min-width: 180px;
+}
+
+.card__name {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #0b5f5f;
+}
+
+.card__button {
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: none;
+  background-color: #0b5f5f;
+  color: white;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  min-width: 140px;
   text-align: center;
-  min-width: 120px;
+}
+
+.card__button:hover {
+  background-color: #0f7a7a;
+}
+
+.card__button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }/*# sourceMappingURL=Card.css.map */

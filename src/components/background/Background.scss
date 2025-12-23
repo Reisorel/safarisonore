@@ -1,8 +1,7 @@
 .bg-container {
-  width: 100vw;
-  height: 100vh;
+  min-width: 100vw;
+  min-height: 100vh;
   background-color: rgb(5, 56, 56);
-  color: rgb(43, 204, 28);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,5 +10,5 @@
 .bg-content {
   display: flex;
   flex-direction: column; // car elles sont empilées verticalement
-  gap: 16px;
+  gap: 2rem;
 }
