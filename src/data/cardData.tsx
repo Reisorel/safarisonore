@@ -2,37 +2,37 @@ import Booba from "../assets/sounds/01_Booba.mp3";
 
 export const cardData = [
   {
-    id: "renard",
+    id: "renard-test",
     name: "Renard",
     sound: Booba,
   },
   {
-    id: "herisson",
+    id: "herisson-test",
     name: "Hérisson",
     sound: Booba,
   },
   {
-    id: "chouette",
+    id: "chouette-test",
     name: "Chouette",
     sound: Booba,
   },
   {
-    id: "loup",
+    id: "loup-test",
     name: "loup",
     sound: Booba,
   },
   {
-    id: "belette",
+    id: "belette-test",
     name: "Chouette",
     sound: Booba,
   },
   {
-    id: "carapuce",
+    id: "carapuce-test",
     name: "Chouette",
     sound: Booba,
   },
   {
-    id: "carapuce",
+    id: "carapuce-test",
     name: "Chouette",
     sound: Booba,
   },
