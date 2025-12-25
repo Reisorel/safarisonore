@@ -58,6 +58,7 @@ export default function Background() {
           <Card
             key={item.id}
             name={item.name}
+            image={item.image}
             isActive={activeId === item.id}
             onPlay={() => playFromStart(item.id, item.sound)}
           />

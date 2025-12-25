@@ -2,13 +2,15 @@ import "./Card.scss";
 
 type CardProps = {
   name: string;
-  isActive: boolean; // optionnel si tu veux styliser
+  image: string;
+  isActive: boolean;
   onPlay: () => void;
 };
 
-export default function Card({ name, onPlay }: CardProps) {
+export default function Card({ name, image, isActive, onPlay }: CardProps) {
   return (
-    <div className="card">
+    <div className={`card ${isActive ? "card--active" : ""}`}>
+      <img className="card__image" src={image} alt={name} />
       <span className="card__name">{name}</span>
 
       <button className="card__button" type="button" onClick={onPlay}>
@@ -17,4 +19,3 @@ export default function Card({ name, onPlay }: CardProps) {
     </div>
   );
 }
-
