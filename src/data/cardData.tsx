@@ -1,39 +1,39 @@
-import Booba from "../assets/sounds/01_Booba.mp3";
+import Vache from "../assets/sounds/01_Vache.mp3";
 
 export const cardData = [
   {
-    id: "renard-test",
-    name: "Renard",
-    sound: Booba,
+    id: "Sidonie",
+    name: "Sidonie",
+    sound: Vache,
   },
   {
-    id: "herisson-test",
-    name: "Hérisson",
-    sound: Booba,
+    id: "Méroline",
+    name: "Méroline",
+    sound: Vache,
   },
   {
-    id: "chouette-test",
-    name: "Chouette",
-    sound: Booba,
+    id: "Les Luminéoles",
+    name: "Les Luminéoles",
+    sound: Vache,
   },
   {
-    id: "loup-test",
-    name: "loup",
-    sound: Booba,
+    id: "Arkalon",
+    name: "Arkalon",
+    sound: Vache,
   },
   {
-    id: "belette-test",
-    name: "Chouette",
-    sound: Booba,
+    id: "Owéliane",
+    name: "Owéliane",
+    sound: Vache,
   },
   {
-    id: "carapuce-test",
-    name: "Chouette",
-    sound: Booba,
+    id: "Dravélior",
+    name: "Dravélior",
+    sound: Vache,
   },
   {
-    id: "carapuce-test",
-    name: "Chouette",
-    sound: Booba,
+    id: "L'Octalune",
+    name: "L'Octalune",
+    sound: Vache,
   },
 ];
