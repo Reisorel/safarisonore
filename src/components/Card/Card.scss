@@ -1,14 +1,14 @@
 .card {
   background: white;
-  border-radius: 12px;
-  padding: 16px 20px;
+  border-radius: 0.75rem;       // 12px
+  padding: 1rem 1.25rem;        // 16px 20px
 
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 12px;
+  gap: 0.75rem;                 // 12px
 
-  min-width: 180px;
+  min-width: 11.25rem;          // 180px
 }
 
 .card__name {
@@ -18,8 +18,8 @@
 }
 
 .card__button {
-  padding: 8px 14px;
-  border-radius: 999px;
+  padding: 0.5rem 0.875rem;     // 8px 14px
+  border-radius: 62.4375rem;    // 999px (équivalent “pilule” en rem)
 
   border: none;
   background-color: #0b5f5f;
@@ -29,7 +29,7 @@
   cursor: pointer;
   transition: background-color 0.2s ease;
 
-  min-width: 140px; // 👈 largeur fixe visuelle
+  min-width: 8.75rem;           // 140px
   text-align: center;
 }
 
@@ -43,30 +43,16 @@
 }
 
 .card__image {
-  width: 4.5rem;   // 72px
-  height: 4.5rem;
-  border-radius: 0.75rem;
-
+  width: 14rem;               // 100px
+  height: 14rem;              // 100px
+  border-radius: 0.75rem;       // 12px
   object-fit: cover;
   flex-shrink: 0;
 }
 
 .card--active {
-  outline: 2px solid currentColor; // exemple simple
+  outline: 0.125rem solid #0b5f5f; // 2px => 0.125rem
+  outline-offset: 0.125rem;        // optionnel, améliore le rendu
 }
 
-//BREAKPOINTS//
-
-@media (min-width: 30rem) { // ~480px
-  .card__image {
-    width: 5.25rem; // 84px
-    height: 5.25rem;
-  }
-}
-
-@media (min-width: 48rem) { // ~768px
-  .card__image {
-    width: 6rem; // 96px
-    height: 6rem;
-  }
-}
+// BREAKPOINTS //
