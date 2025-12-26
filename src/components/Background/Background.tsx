@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import "./Background.scss";
 import Card from "../Card/Card";
+import Intro from "../Intro/Intro"
 import { cardData } from "../../data/cardData";
 
 export default function Background() {
@@ -54,6 +55,7 @@ export default function Background() {
   return (
     <div className="bg-container">
       <div className="bg-content">
+        <Intro/>
         {cardData.map((item) => (
           <Card
             key={item.id}

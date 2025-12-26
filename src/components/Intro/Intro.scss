@@ -1,0 +1,15 @@
+.Intro-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.Intro__image {
+  width: 14rem; // 100px
+  height: 3rem; // 100px
+}
+
+.text__content p {
+  font-size: 0.75rem;
+  color: white;
+}
