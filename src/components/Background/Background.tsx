@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import "./Background.scss";
 import Card from "../Card/Card";
 import Intro from "../Intro/Intro"
+import Footer from "../Footer/Footer"
 import { cardData } from "../../data/cardData";
 
 export default function Background() {
@@ -65,6 +66,7 @@ export default function Background() {
             onPlay={() => playFromStart(item.id, item.sound)}
           />
         ))}
+        <Footer/>
       </div>
     </div>
   );

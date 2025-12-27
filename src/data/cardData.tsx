@@ -6,13 +6,13 @@ import Owéliane_sound from "../assets/sounds/05_Owéliane.mp3";
 import Draviélor_sound from "../assets/sounds/06_Draviélor.mp3";
 import Octalune_sound from "../assets/sounds/07_Octalune.mp3";
 
-import Sidonie_image from "../assets/images/01_Sidonie.png"
-import Méroline_image from "../assets/images/02_Méroline.png"
-import Luminéoles_image from "../assets/images/03_Luminéoles.png"
-import Arkalon_image from "../assets/images/04_Arkalon.png"
-import Owéliane_image from "../assets/images/05_Owéliane.png"
-import Draviélor_image from "../assets/images/06_Draviélor.png"
-import Octalune_image from "../assets/images/07_Octalune.png"
+import Sidonie_image from "../assets/images/01_Sidonie.jpg"
+import Méroline_image from "../assets/images/02_Méroline.jpg"
+import Luminéoles_image from "../assets/images/03_Luminéoles.jpg"
+import Arkalon_image from "../assets/images/04_Arkalon.jpg"
+import Owéliane_image from "../assets/images/05_Owéliane.jpg"
+import Draviélor_image from "../assets/images/06_Draviélor.jpg"
+import Octalune_image from "../assets/images/07_Octalune.jpg"
 
 export const cardData = [
   {
