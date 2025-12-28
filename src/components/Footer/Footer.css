@@ -1,0 +1,8 @@
+.footer-container a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.footer-container a:hover {
+  text-decoration: underline;
+}/*# sourceMappingURL=Footer.css.map */

@@ -1,23 +1,28 @@
+// Background.tsx
 import { useEffect, useRef, useState } from "react";
 import "./Background.scss";
 import Card from "../Card/Card";
-import Intro from "../Intro/Intro"
-import Footer from "../Footer/Footer"
+import Intro from "../Intro/Intro";
+import Footer from "../Footer/Footer";
 import { cardData } from "../../data/cardData";
+import { introData } from "../../data/introData";
+import type { Lang } from "../../data/introData";
+
 
 export default function Background() {
   const lastClickRef = useRef(0);
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const [activeId, setActiveId] = useState<string | null>(null);
 
+  const [lang, setLang] = useState<Lang>("fr");
+  const intro = introData[lang];
+
   useEffect(() => {
     const audio = new Audio();
     audio.preload = "auto";
     audioRef.current = audio;
 
-    audio.onended = () => {
-      setActiveId(null);
-    };
+    audio.onended = () => setActiveId(null);
 
     return () => {
       audio.onended = null;
@@ -31,24 +36,20 @@ export default function Background() {
     const now = Date.now();
     if (now - lastClickRef.current < 120) return;
     lastClickRef.current = now;
+
     const audio = audioRef.current;
     if (!audio) return;
 
-    // Anti-queue: on coupe tout, on remet à zéro, puis on relance
     audio.pause();
     audio.currentTime = 0;
 
-    // Si on clique sur un autre son, on change la source
-    if (audio.src !== soundUrl) {
-      audio.src = soundUrl;
-    }
+    if (audio.src !== soundUrl) audio.src = soundUrl;
 
     setActiveId(id);
 
     try {
       await audio.play();
     } catch {
-      // Si play échoue (rare après un clic), on nettoie l'état
       setActiveId(null);
     }
   };
@@ -56,7 +57,26 @@ export default function Background() {
   return (
     <div className="bg-container">
       <div className="bg-content">
-        <Intro/>
+        {/* Toggle minimal */}
+        <div className="lang-toggle">
+          <button
+            type="button"
+            onClick={() => setLang("fr")}
+            aria-pressed={lang === "fr"}
+          >
+            FR
+          </button>
+          <button
+            type="button"
+            onClick={() => setLang("en")}
+            aria-pressed={lang === "en"}
+          >
+            EN
+          </button>
+        </div>
+
+        <Intro title={intro.title} paragraphs={intro.paragraphs} cta={intro.cta} />
+
         {cardData.map((item) => (
           <Card
             key={item.id}
@@ -66,7 +86,8 @@ export default function Background() {
             onPlay={() => playFromStart(item.id, item.sound)}
           />
         ))}
-        <Footer/>
+
+        <Footer />
       </div>
     </div>
   );
