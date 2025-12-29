@@ -1,10 +1,13 @@
 // src/data/introData.ts
 export type Lang = "fr" | "en";
 
-export const introData: Record<
-  Lang,
-  { title: string; paragraphs: string[]; cta: string }
-> = {
+export type IntroContent = {
+  title: string;
+  paragraphs: string[];
+  cta: string;
+};
+
+export const introData: Record<Lang, IntroContent> = {
   fr: {
     title: "Safari Sonore",
     paragraphs: [
@@ -26,3 +29,4 @@ export const introData: Record<
     cta: "Which one will you hear?",
   },
 };
+
