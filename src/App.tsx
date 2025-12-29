@@ -1,13 +1,13 @@
-import Background from "./components/Background/Background"
-
+import Background from "./components/Background/Background";
+import { Analytics } from "@vercel/analytics/next";
 
 function App() {
-
   return (
     <>
-    <Background/>
+      <Background />
+      <Analytics />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
