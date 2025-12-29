@@ -8,7 +8,6 @@ import { cardData } from "../../data/cardData";
 import { introData } from "../../data/introData";
 import type { Lang } from "../../data/introData";
 
-
 export default function Background() {
   const lastClickRef = useRef(0);
   const audioRef = useRef<HTMLAudioElement | null>(null);
@@ -16,6 +15,13 @@ export default function Background() {
 
   const [lang, setLang] = useState<Lang>("fr");
   const intro = introData[lang];
+
+  const uiText: Record<Lang, { playLabel: string }> = {
+    fr: { playLabel: "Écoute son cri" },
+    en: { playLabel: "Listen to its call" },
+  };
+
+  const { playLabel } = uiText[lang];
 
   useEffect(() => {
     const audio = new Audio();
@@ -75,7 +81,11 @@ export default function Background() {
           </button>
         </div>
 
-        <Intro title={intro.title} paragraphs={intro.paragraphs} cta={intro.cta} />
+        <Intro
+          title={intro.title}
+          paragraphs={intro.paragraphs}
+          cta={intro.cta}
+        />
 
         {cardData.map((item) => (
           <Card
@@ -84,6 +94,7 @@ export default function Background() {
             image={item.image}
             isActive={activeId === item.id}
             onPlay={() => playFromStart(item.id, item.sound)}
+            playLabel={playLabel} // ✅ nouveau
           />
         ))}
 
